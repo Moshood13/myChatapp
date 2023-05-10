@@ -1,3 +1,23 @@
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+
+
 .formContainer {
     background-image: linear-gradient(118deg, rgba(92, 39, 92, 0.541), rgb(59, 43, 59)), url("../assets/bg1.jpg");
     width: 100%;
@@ -112,6 +132,10 @@
 
                 .logo {
                     color: white;
+
+                    @include tablet {
+                      display: none;
+                    }
                 }
 
                 .user {
@@ -270,7 +294,7 @@
                     display: flex;
                     gap: 10px;
                     align-items: flex-end;
-                    
+
 
                     .details {
                         display: flex;
@@ -278,7 +302,8 @@
                         font-weight: 300;
                         font-size: 12px;
                         padding: 5px 0;
-                       
+                        color: grey;
+
 
                         img {
                             width: 30px;
@@ -294,13 +319,14 @@
                         flex-direction: column;
                         max-width: 80%;
                         gap: 10px;
-                        
+
                         img {
                             width: 100px;
                             height: 100px;
                             object-fit: cover;
-                            
+
                         }
+
                         .text {
                             display: flex;
 

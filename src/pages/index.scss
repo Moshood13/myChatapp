@@ -19,7 +19,7 @@
             font-size: 2em;
             font-style: oblique;
             color: rgb(138, 51, 138);
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
 
@@ -39,7 +39,7 @@
                 color: white;
                 display: flex;
                 margin: 10px 0;
-                
+
 
 
                 &:nth-child(3) {
@@ -54,7 +54,7 @@
                 font-size: 14px;
                 align-items: center;
                 cursor: pointer;
-                
+
 
                 .icon {
                     font-size: 2.5em;
@@ -99,14 +99,13 @@
 
         .sidebar {
             flex: 1;
-            border-right: 1px solid black;
+            border-right: 1px solid rgba(190, 123, 190, 0.507);
             background: rgba(190, 123, 190, 0.507);
 
             .navbar {
                 display: flex;
                 justify-content: space-between;
                 padding: 10px 10px;
-                border-bottom: 1px solid white;
                 border-bottom-right-radius: 10px;
                 border-bottom-left-radius: 10px;
                 background: rgb(190, 123, 190);
@@ -137,6 +136,92 @@
                             background: transparent;
                             border: none;
                             border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .search {
+                border-bottom: 1px dashed white;
+                padding: 5px 0;
+
+                .search-container {
+                    background-color: rgba(206, 30, 206, 0.7);
+                    display: inline-flex;
+                    align-items: center;
+                    width: 100%;
+
+                    .icon {
+                        color: rgb(255, 255, 255);
+                        font-size: 16px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 5px;
+                    }
+
+                    input {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        padding: 10px 10px;
+                        font-size: 20x;
+                        color: white;
+
+                        &::placeholder {
+                            color: white;
+                        }
+                    }
+                }
+
+                .userChat {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 5px 10px;
+                    gap: 10px;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        object-fit: cover;
+                        border-radius: 50px;
+                    }
+
+                    .name {
+                        color: white;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .chats {
+                .userChat {
+                    display: flex;
+                    flex-direction: row;
+                    padding: 10px 10px;
+                    gap: 10px;
+                    margin: 10px 0;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                        border-radius: 50px;
+                    }
+
+                    .userChatInfo {
+                        display: flex;
+                        flex-direction: column;
+
+                        .name {
+                            color: white;
+                            font-size: 16px;
+                        }
+
+                        .lastMessage {
+                            font-size: 13px;
+                            color: rgba(238, 238, 238, 0.842);
+                            font-style: italic;
                         }
                     }
                 }
@@ -145,6 +230,137 @@
 
         .chat {
             flex: 2;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
+                color: white;
+                background: purple;
+                align-items: center;
+
+                span {
+                    font-style: italic;
+                    font-size: 14px;
+                }
+
+
+
+                .icons {
+                    display: flex;
+                    gap: 20px;
+                    padding: 0 10px;
+
+
+                    .icon {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .messages {
+                background-color: white;
+                height: calc(100% - 70px);
+                overflow: scroll;
+
+                .owner {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    gap: 10px;
+                    margin: 20px 10px;
+
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50px;
+                            object-fit: cover;
+                        }
+
+                        span {
+                            font-size: 10px;
+                            font-style: italic;
+                        }
+                    }
+
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        background-color: rgba(206, 30, 206, 0.7);
+                        color: white;
+                        padding: 5px 10px;
+                        border-top-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                }
+                .receiver {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    margin: 20px 10px;
+
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50px;
+                            object-fit: cover;
+                        }
+
+                        span {
+                            font-size: 10px;
+                            font-style: italic;
+                        }
+                    }
+
+                    .text {
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        background-color: rgba(206, 30, 206, 0.7);
+                        color: white;
+                        padding: 5px 10px;
+                        border-top-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+                }
+            }
+
+            .input {
+                display: flex;
+                align-items: center;
+                color: white;
+
+                input {
+                    width: 80%;
+                    padding: 5px 5px;
+                    outline: none;
+
+                }
+
+                .send {
+                    display: flex;
+                    gap: 10px;
+                    padding: 5px 10px;
+
+                    .icon {
+                        font-size: 18px;
+                    }
+
+                    button {
+                        background-color: rgba(206, 30, 206, 0.7);
+                        border: none;
+                        color: white;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-import { faPowerOff, faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import pic1 from "../assets/20230106_184536.jpg"

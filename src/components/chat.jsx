@@ -10,6 +10,7 @@ import { ChatContext } from "../context/ChatContext";
 const Chat = () => {
 
     const { data } = useContext(ChatContext)
+     
     return (
         <div className="chat">
             <div className="header">
@@ -20,7 +21,6 @@ const Chat = () => {
                     <FontAwesomeIcon icon={faEllipsis} className="icon" />
                 </div>
             </div>
-
             <Messages />
             <Input />
         </div>

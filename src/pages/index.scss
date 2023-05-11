@@ -231,16 +231,15 @@
                         object-fit: cover;
                         border-radius: 50px;
                     }
-
                     .userChatInfo {
                         display: flex;
                         flex-direction: column;
-
+    
                         .name {
                             color: white;
                             font-size: 16px;
                         }
-
+    
                         .lastMessage {
                             font-size: 13px;
                             color: rgba(238, 238, 238, 0.842);
@@ -248,6 +247,8 @@
                         }
                     }
                 }
+
+
             }
         }
 
@@ -295,11 +296,13 @@
                 gap: 10px;
                 width: 100%;
                 
+                
 
                 .messageContent {
                     display: flex;
                     flex-direction: row;
                     align-items: flex-end;
+                    gap: 10px;
 
                     .details {
                         display: flex;
@@ -308,6 +311,7 @@
                         font-size: 12px;
                         padding: 5px 0;
                         color: grey;
+                        
     
     
                         img {
@@ -326,8 +330,8 @@
                         gap: 10px;
     
                         img {
-                            width: 100px;
-                            height: 100px;
+                            width: 150px;
+                            height: 150px;
                             object-fit: cover;
     
                         }

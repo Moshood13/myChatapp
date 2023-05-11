@@ -9,7 +9,7 @@ import { ChatContext } from "../context/ChatContext";
 const Search = () => {
     const [username, setUserName] = useState("");
     const [user, setUser] = useState(null);
-    const [err, setErr] = useState(false);
+    const [error, setErr] = useState(false);
 
     const { currentUser } = useContext(AuthContext)
     const { dispatch } = useContext(ChatContext)
@@ -17,13 +17,14 @@ const Search = () => {
     const handleSearch = async () => {
         const q = query(collection(db, "users"), where("displayName", "==", username)
         );
+
         try {
             const querySnapshot = await getDocs(q);
             querySnapshot.forEach((doc) => {
                 setUser(doc.data())
             });
         } catch (err) {
-            setErr(true)
+            setErr(true);
         }
     }
 
@@ -53,6 +54,15 @@ const Search = () => {
                   },
                   [combinedId + ".date"]: serverTimestamp()
                 });
+                
+                await updateDoc(doc(db, "userChat", user.uid), {
+                    [combinedId + ".userInfo"]: {
+                      uid: currentUser.uid,
+                      displayName: currentUser.displayName,
+                      photoURL: currentUser.photoURL
+                    },
+                    [combinedId + ".date"]: serverTimestamp()
+                  });
             }
          } catch (err) {}
 
@@ -71,7 +81,7 @@ const Search = () => {
                 value={username}
                 />
             </div>
-            {err && <span>User not found!</span> }
+            {error && <span>User not found!</span> }
             {user && <div className="userChat" onClick={handleSelect}>
                 <img src={user.photoURL} alt="" />
                 <div className="userChatInfo">

@@ -1,0 +1,151 @@
+  .aside,
+  .chatBox,
+  .menu {
+      display: inline-flex;
+      flex-direction: column;
+      background-color: rgb(128, 28, 209);
+      margin: 0 1px;
+  }
+
+  .aside {
+      flex: 1;
+
+      .header {
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .user {
+              display: flex;
+              justify-content: space-between;
+              padding: 10px 5px;
+
+              .logo {
+                  display: flex;
+                  font-size: 14px;
+              }
+
+              .userText {
+
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  position: absolute;
+                  left: 17%;
+
+                  img {
+                      width: 40px;
+                      height: 40px;
+                      object-fit: cover;
+                      border-radius: 50px;
+                      outline: 2px solid green;
+                  }
+
+                  .icon {
+                      position: absolute;
+                      left: 100%;
+                  }
+              }
+          }
+
+          .profile {
+              display: flex;
+              flex-direction: column;
+              padding: 10px;
+              gap: 10px;
+              position: absolute;
+              border-radius: 5px;
+              left: 17%;
+              background-color: rgb(128, 28, 209);
+              
+
+              h4 {
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: rgb(255, 255, 255);
+              }
+              
+          }
+      }
+
+      .search {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+          padding: 5px 0;
+          padding: 10px 10px;
+
+          .searchBox {
+              padding: 10px 10px;
+              background: white;
+              border-radius: 50px;
+              display: flex;
+              gap: 10px;
+              margin: 10px 0;
+
+
+              .icon {
+                  color: rgb(71, 71, 71);
+              }
+
+              input {
+                  border: none;
+                  outline: none;
+              }
+
+          }
+
+          .searchResult {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 16px;
+
+              img {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  object-fit: cover;
+              }
+          }
+      }
+
+      .chats {
+          padding: 10px 10px;
+
+
+          .userChat {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              img {
+                  width: 40px;
+                  height: 40px;
+                  object-fit: cover;
+                  border-radius: 50%;
+              }
+
+              .text {
+
+                  h3 {
+                      font-size: 16px;
+                      color: rgb(228, 228, 228);
+                  }
+
+                  .lastMessage {
+                      font-size: 12px;
+                      font-style: italic;
+                  }
+              }
+          }
+      }
+  }
+
+  .chatBox {
+      flex: 1.5;
+
+  }
+
+  .menu {
+      flex: 1;
+  }
